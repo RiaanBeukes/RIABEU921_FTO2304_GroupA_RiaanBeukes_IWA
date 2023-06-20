@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Count</title>
+
+    <link rel="stylesheet" href="/IWA_1.1.css">
+
+    <script src="/IWA_1.1_script.js"></script>
+</head>
+
+   <body>
+      <header class="header">
+          <h1 class="header_title">
+               Tally Count
+          </h1>
+      </header>
+
+        <aside class="controls">
+               <label>
+                   <span>Display</span>
+                       <select>
+                            <option>Single</option>
+                            <option>Multiple</option>
+                       </select>
+               </label>
+
+               <label>
+                  <span>Counter</span>
+                      <select>
+                           <option>Counter1</option>
+                           <option>Counter2</option>
+                           <option>Counter3</option>
+                      </select>
+               </label>
+
+               <button>Settings</button>
+        </aside>
+
+
+        <main class="counter">
+             <input class="counter_value" readonly 
+                value="1000">
+
+             <div class="counter_actions">
+                <button class="counter_button counter_button_first">-</button>
+                <button class="counter_button">+</button>
+             </div>
+        </main>
+
+        <footer class="footer">
+            Inspired by <a href="https://tallycount.app/">Tally Count</a>. 
+            Please note this is just a practice project for learning Javascript.
+        </footer>
+   </body>
+</html>
