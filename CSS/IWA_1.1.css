@@ -1,7 +1,7 @@
 :root {
     --color-green: #31c48d;
     --color-white:#ffffff;
-    --color-dark-grey: #33333d;
+    --color-dark-grey: #2d2d35;
     --color-medium-grey: #424250;
     --color-light-grey: #515163;
 }
@@ -33,6 +33,7 @@
 .header_title {
     font-size: 3rem;
     font-weight: 900;
+    color: var(--color-light-grey); 
 }
 
 /*---counter---*/
@@ -60,14 +61,21 @@
     background: none;
     width: 50%;
     border-width: 0;
-    color: var(--light-grey);
+    color: var(--color-white);
     font-size: 3rem;
     height: 10rem;
-    border-bottom: 1px solid var(--color-light-grey);
+    border-bottom: 2px solid var(--color-light-grey);
+    transition: transform 0.3s;
+    transform: translateY(0);
+}
+
+.counter_button:disabled {
+    background: opacity 0.2;
 }
 
 .counter_button:active {
     background:var(--color-medium-grey);
+    transform: translateY(2%);
 }
 
 .counter_button_first {
@@ -76,7 +84,7 @@
 
 /*---controls----*/
 .controls {
-    background: yellow;
+    background: rgb(50, 113, 207);
 }
 
 /*---footer---*/
