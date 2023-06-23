@@ -1,16 +1,26 @@
+console.log('Hello World')
+
 const MAX_NUMBER = 15
 const MIN_NUMBER = -5
-const STEP_AMOUNT = 5;
+const STEP_AMOUNT = 1;
 
 const number = document.querySelector('[data-key="number"]')
 const subtract = document.querySelector('[data-keys="subtract"]')
 const add = document.querySelector('[data-key="add"]')
 
-// (boolean=   console.log(typeof 123, typeoff "123")
+//  subtract.addEventListener('click', )
+//  add.addEventListener('click', )
+
+//   console.log(typeof 123, typeoff "123", typeoff true)
 
 const subtractHandler = () => {
-    const newValue = parseInt(number.value) - STEP_AMOUNT
+    //const newValue = parseInt(number.value) - STEP_AMOUNT
+    const newValue = parseInt(number.value) - 1
     number.value = newValue
+
+    // * v THIS is called an "Operator" v *
+    //if (add.disabled === true) {
+    //    add.disabled = false}
 
     if (add.disabled === true) {
         add.disabled = false
@@ -25,12 +35,7 @@ const addHandler = () => {
         const newValue = parseInt(number.value) + 1
         number.value = newValue
     
-
-    if (number.value <= MIN_NUMBER) {
-        add.disabled = false
-    }
-
-    if (number.value >= MAX_NUMBER) {
-        add.disabled = true
+        if (subtract.disabled === true) {
+        subtract.disabled = false
     }
 }

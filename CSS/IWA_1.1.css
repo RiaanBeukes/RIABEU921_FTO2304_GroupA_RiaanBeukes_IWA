@@ -14,7 +14,9 @@
     height: 100vh;
 }
 
-.body {
+
+
+body {
     margin: 0;
     background: var(--color-medium-grey);
     color:var(--color-white);
@@ -25,9 +27,12 @@
     height: 100%;
 }
 
+
+
 /*-----header----*/
 .header {
     text-align:center;
+    background: var(--color-medium-grey);
 }
 
 .header_title {
