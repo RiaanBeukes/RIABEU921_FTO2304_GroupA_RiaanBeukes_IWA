@@ -1,16 +1,20 @@
 //console.log('Hello World')
 
-const MAX_NUMBER = 15
-const MIN_NUMBER = -5
+const MAX_NUMBER = 15;
+const MIN_NUMBER = -5;
 const STEP_AMOUNT = 1;
 
 const number = document.querySelector('[data-key="number"]')
 const subtract = document.querySelector('[data-key="subtract"]')
 const add = document.querySelector('[data-key="add"]')
 
-//  subtract.addEventListener('click', )
-//  add.addEventListener('click', )
-
+subtract.addEventListener('click', function() {
+    subtractHandler();
+ })
+ add.addEventListener('click',function() {
+    addHandler();
+ })
+ 
 const subtractHandler = () => {
     //const newValue = parseInt(number.value) - STEP_AMOUNT
     const newValue = parseInt(number.value) - 1
