@@ -11,8 +11,6 @@ const add = document.querySelector('[data-key="add"]')
 //  subtract.addEventListener('click', )
 //  add.addEventListener('click', )
 
-//   console.log(typeof 123, typeoff "123", typeoff true)
-
 const subtractHandler = () => {
     //const newValue = parseInt(number.value) - STEP_AMOUNT
     const newValue = parseInt(number.value) - 1
@@ -33,5 +31,9 @@ const addHandler = () => {
     
         if (subtract.disabled === true) {
         subtract.disabled = false
+    }
+
+    if (newValue >= MAX_NUMBER) {
+        add.disabled = true
     }
 }
