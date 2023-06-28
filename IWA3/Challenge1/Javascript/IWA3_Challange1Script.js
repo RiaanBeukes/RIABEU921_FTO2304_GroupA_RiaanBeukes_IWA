@@ -1,4 +1,4 @@
-import { company, year } from "./IWA3_Challnge1_Config";
+import { company, year } from "";
 
 document.addEventListener("DOMContentLoaded", function () {
   const message = "© " + company + " (" + year + ")";
