@@ -1,8 +1,8 @@
-export let firstName = "Johannes";
-export let surname = "Potgieter";
-export let role = "Intern";
+const firstName = "Johannes";
+const surname = "Potgieter";
+export const role = "Intern";
 
 document.addEventListener("DOMContentLoaded", function () {
-let display= firstName + " " + surname + " (" + role + ")";
+const display= firstName + " " + surname + " (" + role + ")";
 document.querySelector('#johannes').innerText = display;
 });
