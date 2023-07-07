@@ -1,14 +1,16 @@
 const FREE_WARNING = 'Free shipping only applies to single customer orders';
 const BANNED_WARNING = 'Unfortunately, we do not ship to your country of residence';
 const NONE_SELECTED = 0;
+//Location was made into a global declaration to ensure variable applies in global scope.
+const LOCATION = 'RSA';
 
 //Added let to make variable, set currency to null.
 /*assigned currency to value of null so they can change later.*/
 let shipping = null;
 let currency = null;
 
-//example is set as location:RSA, thus const added.
-const location = 'RSA';
+//Let added to location for later re-assignment, and const for customers.
+//let location = 'RSA';
 const customers = 1;
 
 //example quantities is set in example, thus const added.
@@ -22,11 +24,11 @@ const pens = 5 * NONE_SELECTED;
 //--------Conditions to assign currency according to location---------------
 /*function to assign different shipping costs and currencies
 based on value of location variable*/
-if (location === 'RSA') {
+if (LOCATION === 'RSA') {
 /*operator "===" if true location is RSA, then assigns shipping,currency.*/
   shipping = 400;
   currency = 'R';
-} else if (location === 'NAM') {
+} else if (LOCATION === 'NAM') {
 /*operator "===" if true location is NAM, then assigns shipping,currency.*/
   shipping = 600;
   currency = '$';
@@ -45,11 +47,11 @@ const calcShipping = shipping === 0 ? 0 : shipping;
 //-------Conditions to check if customer gets free shipping---------------
 /*Restructured function syntax to check if conditions are met in regards to:
 location, number of clients and order is not below min amount for shipping.  */
-if (location === 'RSA' && totalCost >= 1000 && customers === 1) {
+if (LOCATION === 'RSA' && totalCost >= 1000 && customers === 1) {
     shipping = 0;
 } else {
 /*if above is not true then it checks: */
-if (location ==='NAM' && totalCost >= 60 && customers === 1) {
+if (LOCATION ==='NAM' && totalCost >= 60 && customers === 1) {
     shipping = 0;
 } else {
 /*if above is not true then issue warning: */
@@ -68,7 +70,7 @@ if (shipping === 0 && customers !== 1) {
 //------Condition to give warning if location is North Korea---------------------
 /*-Added condition 'if(){}" to give warning if location is NorthKorea, else print price.
   -Removed ternary operator '?'.   */
-if (location === 'NK') {
+if (LOCATION === 'NK') {
   console.log(BANNED_WARNING);
 } else {
   console.log('Price:', currency, totalCost + shipping);
