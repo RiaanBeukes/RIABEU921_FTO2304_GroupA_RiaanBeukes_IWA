@@ -3,8 +3,8 @@ const tax = '8%'; //see issue is string.
 const food = 51.7501;
 const salary = 800;
 const transport = 10.2;
-const hourOfDay = 00; //Research suggest time variable used with '00:00' though its a string.
-const minuteOfDay = 00;//00 has same value as 0.
+const hourOfDay = 0o0; //OG'00'.  |Research suggest time variable used with '00:00' though its a string.
+const minuteOfDay = 0o0;//OG '00'.| '00'  has same value as 0.
 //                      Interestingly:"+0 === -0" but "1/+0 !== 1/-0"  .......
 
 // *Only change below this line*
