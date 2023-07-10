@@ -3,8 +3,8 @@ const tax = '8%'; // Initialized as string.
 const food = 51.7501;
 const salary = 800;
 const transport = 10.2;
-const hourOfDay = 00; // Syntax errors. VS suggest '0o0'.
-const minuteOfDay = 00; // Syntax errors. VS suggest '0o0'.
+const hourOfDay = 00; // Syntax errors. Use '0',else VS code suggest '0o0'.
+const minuteOfDay = 00; // Syntax errors. Use '0',else VS code suggest '0o0'.
 
 // Only change below this line
 

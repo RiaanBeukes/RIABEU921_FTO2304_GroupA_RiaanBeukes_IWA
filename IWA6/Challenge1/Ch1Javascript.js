@@ -5,7 +5,8 @@ const secondaryPhone = '0219131568'
 
 /*-Use typeof to check if type of the value are equal. Thus 'typeof number==primaryPhone is not usable.
   -Example: Used "typeof primaryPhone==='string'" to see if ph num is same type or value as 'string'.
-  -Then used '&& !isNaN(primaryPhone);' to check if primaryPhone is NOT a numerical catanation */
+  -Then used '&& !isNaN(primaryPhone);to check if primaryPhone is NOT a numerical concatanation */
+//-------<'isNan()' is a global function used to check if NaN is correct>----------
 const primaryValid = typeof primaryPhone === 'string' && !isNaN(primaryPhone);
 const secondaryValid = typeof secondaryPhone === 'string' && !isNaN(secondaryPhone);
 
