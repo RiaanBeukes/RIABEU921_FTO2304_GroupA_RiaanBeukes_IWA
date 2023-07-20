@@ -99,6 +99,9 @@ const lastHolidayTimestamp = Math.max(
     holidays[8].date,//.getTime()
 );
 
+/*Added .toString() :to display value as string.
+        .padStart() :display 0 first if number under 10. 
+        .const firstMonth :+1 to manage months: months counts from 0-11*/
 const firstHolidayDate = new Date(firstHolidayTimestamp);
 const firstDay = firstHolidayDate.getDate().toString().padStart(2, '0');
 const firstMonth = (firstHolidayDate.getMonth() + 1).toString().padStart(2, '0');
