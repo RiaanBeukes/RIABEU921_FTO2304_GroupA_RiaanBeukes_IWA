@@ -22,11 +22,12 @@ const calcUser = () => {
 };
 
 //Moved '=' to after checkUser
-const checkUser = () => {
+//*** remove commits in code to run ***
+//const checkUser = () => {
     if (user && state === 'requesting') {
         console.log(`User: ${user} (${calculated})`);
     }
-};
+//};
 
 // Only allowed to change code above
 
@@ -76,5 +77,4 @@ const checkUser = () => {
 		console.log(`User: ${user} (${calculated})`);
 	}
 }
-// Only allowed to change code above
-*/
+---------- Only allowed to change code above---------*/
