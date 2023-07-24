@@ -123,7 +123,7 @@ const createHtml = (athleteId) => {
  (which should actually be time as per the provided data structure) into
  individual variables named first, second, third, and fourth. 
  !*The assumption here is that time is an array containing the lap times for a race.
-*But there is a mistake in the code as it is trying to destructure into
+*The mistake in the code is its trying to destructure into
  individual variables but lacks the correct syntax. In JavaScript, the destructuring
  assignment for arrays uses square brackets []. So, it should be written like this:
 --------------------------------------------------------
