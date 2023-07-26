@@ -1,4 +1,3 @@
-//========================Cat===================================
 const MONTHS = [
     'January',
     'February',
@@ -21,37 +20,37 @@ const getDaysInMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 
 const createArray = (length) => {
     const result = [];
 
-    for (let i = 0; i < length; i++) { // Fixed the loop initialization and condition
+    for (let i = 0; i < length; i++) {    // Fixed the loop initialization and condition
         result.push(i);
     }
 
     return result;
 };
 
-const createData = () => { // Corrected the syntax of the function declaration
+const createData = () => {
     const current = new Date();
-    current.setDate(1); // Used setDate() instead of set()
+    current.setDate(1);
 
-    const startDay = current.getDay(); // Used getDay() to get the day of the week (0 for Sunday, 1 for Monday, etc.)
+    const startDay = current.getDay();
     const daysInMonth = getDaysInMonth(current);
 
     const weeks = createArray(5);
-    const days = createArray(35); // We'll create 5 weeks (35 days) to ensure all months fit in
-
     const result = [];
 
     for (const weekIndex of weeks) {
-        result.push({
+        const week = {
             week: weekIndex + 1,
-            days: [],
-        });
+            days: []
+        };
 
-        for (const dayIndex of days) { // Used dayIndex instead of an empty loop variable
-            const day = dayIndex - startDay + 1; // Adjusted the formula to calculate the day value
+        result.push(week);
+
+        for (let dayIndex = 0; dayIndex < 7; dayIndex++) {
+            const day = (weekIndex * 7) + dayIndex - startDay + 1;
             const isValid = day > 0 && day <= daysInMonth;
 
-            result[weekIndex].days.push({
-                dayOfWeek: (dayIndex + 1) % 7, // Use modulus to get the day of the week (0 for Sunday, 1 for Monday, etc.)
+            week.days.push({
+                dayOfWeek: dayIndex,
                 value: isValid ? day : '',
             });
         }
@@ -59,6 +58,7 @@ const createData = () => { // Corrected the syntax of the function declaration
 
     return result;
 };
+
 
 const addCell = (existing, classString, value) => {
     const result = /* html */ `

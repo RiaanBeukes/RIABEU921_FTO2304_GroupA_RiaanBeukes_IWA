@@ -61,6 +61,7 @@ const MONTHS = [
     const { date, time } = lastRace;   
   
     const fragment = document.createDocumentFragment();  
+    const section = document.createElement('section');
   
 const title = document.createElement('h2');         //changed to 'h2'
 title.textContent = id;                            

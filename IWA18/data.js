@@ -102,3 +102,12 @@ export const updateDragging = (newDragging) => {
         over,
     }
 }
+
+/*Mynote:The updateDragging function is used to update the state of dragging
+ info in the application. It takes an object newDragging as input, which contains 
+ info about the source and destination of a drag operation. 
+ If the destination (over) is different from the current value stored in the state.
+ Dragging object, the function updates the state. 
+ Dragging object with the new source and destination values, effectively updating the
+ dragging state in the application. 
+*/
